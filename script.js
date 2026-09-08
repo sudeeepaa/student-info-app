@@ -2,17 +2,15 @@ const showDetailsBtn = document.getElementById("showDetailsBtn");
 const details = document.getElementById("details");
 
 showDetailsBtn.addEventListener("click", function () {
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-        details.innerHTML = `
-            <p><strong>Name:</strong> Cynthia</p>
-            <p><strong>Register Number:</strong> 101</p>
-            <p><strong>Programme:</strong> MCA</p>
-        `;
+    details.style.display = "block";
 
-        showDetailsBtn.textContent = "Hide Details";
-    } else {
-        details.style.display = "none";
-        showDetailsBtn.textContent = "Show Details";
-    }
+    details.innerHTML = `
+        <h3>Student Details</h3>
+        <p>Name: Albin Thomas</p>
+        <p>Register Number: 2547209</p>
+        <p>Programme: MCA</p>
+        <p>Status: Active Student</p>
+    `;
+
+    showDetailsBtn.textContent = "Details Shown";
 });
